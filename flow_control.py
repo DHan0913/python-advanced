@@ -91,6 +91,11 @@ def for_ex():
         for b in range(1, 10):
             print(a, "X" ,b, "=", a * b)
 
+    for a in range(2, 10):
+        print(f"{a}단")
+        for b in range(1, 10):
+            print(f"{a} X {b} =", a * b)
+
     # 연습문제 2
     # 별 그리기
     # *
