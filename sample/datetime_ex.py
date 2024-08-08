@@ -55,7 +55,26 @@ def timedelta_ex():
 
     # datetime과 timedelta 합산
     print(current, "에서", diff, "를 합산한 결과:", current + diff)
+    
+def format_date():
+    """
+    .strftime() -> 날짜, 시간 정보를 문자열로 포메팅
+    .strptime() -> 문쟈열 정보를 날짜, 시간 정보로 해독
+    """
+
+    current = datetime.now()
+    print(current)
+    print(current.strftime("%Y년 %m월 %d일 %H시 %M분 %S초"))
+    
+    strdate = "2045년 08월 08일"
+    dt = datetime.strptime(strdate, "%Y년 %m월 %d일")
+    print(dt)
+    print(repr(dt))
+
+    # dt2 = eval(repr(dt))
+    # print(dt2, type(dt2))
 
 if __name__ == "__main__":
     # get_datetime()
-    timedelta_ex()
+    # timedelta_ex()
+    format_date()
